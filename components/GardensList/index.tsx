@@ -6,22 +6,26 @@ import HortaCajuru from '../../images/horta-cajuru.jpeg';
 import Pin from '../../images/pin.svg';
 import Plant from '../../images/plant.svg';
 import ArrowRight from '../../images/arrow-right.svg';
+import Link from 'next/link';
 
 function GardensList() {
   const gardens = [
     {
+      id: 1,
       image: HortSanta,
       name: 'Santa Luisa de Marillac',
       type: 'Comunitária',
-      adress: 'Cajuru',
+      adress: 'Rebouças',
     },
     {
+      id: 2,
       image: HortiMundo,
       name: 'Horti-Mundo',
       type: 'Comunitária',
       adress: 'Novo Mundo',
     },
     {
+      id: 3,
       image: HortaCajuru,
       name: 'Horta Cajuru',
       type: 'Comunitária',
@@ -45,8 +49,8 @@ function GardensList() {
             </div>
             <div className='p-4'>
               <span className='font-black text-2xl'>{garden.name}</span>
-              <div className='flex items-center mt-4 mb-3'>
-                <div className='w-3'>
+              <div className='flex mt-4 mb-3'>
+                <div className='w-3 flex items-center'>
                   <Image src={Pin} alt='Icone localização' />
                 </div>
 
@@ -54,7 +58,7 @@ function GardensList() {
                 <span className='text-base ml-1'>{garden.adress}</span>
               </div>
               <div className='flex'>
-                <div className='w-3'>
+                <div className='w-3 flex items-center'>
                   <Image src={Plant} alt='Icone Planta' />
                 </div>
 
@@ -62,9 +66,11 @@ function GardensList() {
                 <span className='text-base ml-1'>{garden.type}</span>
               </div>
               <div className='flex justify-end'>
-                <button className='flex items-center justify-center bg-green text-white w-10 h-10 rounded-lg transition hover:bg-[#3b8a85]'>
-                  <Image src={ArrowRight} alt='Icone Seta direita' />
-                </button>
+                <Link href={{ pathname: '/profile', query: { id: garden.id } }}>
+                  <button className='flex items-center justify-center bg-green text-white w-10 h-10 rounded-lg transition hover:bg-[#3b8a85]'>
+                    <Image src={ArrowRight} alt='Icone Seta direita' />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

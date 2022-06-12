@@ -9,7 +9,14 @@ const Home: NextPage = () => {
   return (
     <>
       <Container>
-        <Header />
+        <Header
+          showLink
+          href={
+            'https://wa.me/5541988769165?text=Olá,%20gostaria%20de%20cadastrar%20minha%20horta!'
+          }
+          target='_blank'
+          linkText='Cadastrar minha horta'
+        />
         <Panel />
         <GardensList />
       </Container>
