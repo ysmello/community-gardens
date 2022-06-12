@@ -62,7 +62,7 @@ function GardensList() {
                 <span className='text-base ml-1'>{garden.type}</span>
               </div>
               <div className='flex justify-end'>
-                <button className='flex items-center justify-center bg-green text-white w-10 h-10 rounded-lg'>
+                <button className='flex items-center justify-center bg-green text-white w-10 h-10 rounded-lg transition hover:bg-[#3b8a85]'>
                   <Image src={ArrowRight} alt='Icone Seta direita' />
                 </button>
               </div>

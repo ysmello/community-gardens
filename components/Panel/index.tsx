@@ -14,7 +14,7 @@ function Panel() {
           Encontre as hortas comunitárias da sua cidade 🌱
         </span>
         <Link href='#second-section'>
-          <button className='transition w-80 h-12 rounded-2xl cursor-pointer text-white bg-green hover:brightness-50'>
+          <button className='transition w-80 h-12 rounded-2xl cursor-pointer text-white bg-green hover:bg-[#3b8a85]'>
             Conhecer Hortas
           </button>
         </Link>
