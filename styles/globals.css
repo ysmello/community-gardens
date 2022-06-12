@@ -9,6 +9,10 @@
     @apply font-inter;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html,
   body,
   #__next {

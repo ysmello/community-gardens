@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import PanelImage from '../../images/image-painel.png';
 
@@ -12,9 +13,11 @@ function Panel() {
         <span className='text-2xl mb-11'>
           Encontre as hortas comunitárias da sua cidade 🌱
         </span>
-        <button className='transition w-80 h-12 rounded-2xl cursor-pointer text-white bg-green hover:brightness-50'>
-          Conhecer Hortas
-        </button>
+        <Link href='#second-section'>
+          <button className='transition w-80 h-12 rounded-2xl cursor-pointer text-white bg-green hover:brightness-50'>
+            Conhecer Hortas
+          </button>
+        </Link>
       </div>
       <div>
         <Image
