@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import GardensList from '../components/GardensList';
@@ -8,6 +9,10 @@ import Panel from '../components/Panel';
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Horta</title>
+        <link rel='shortcut icon' href='/favicon.png' type='image/png' />
+      </Head>
       <Container>
         <Header
           showLink
