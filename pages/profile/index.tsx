@@ -97,29 +97,33 @@ const Profile: NextPage = () => {
           target='_self'
         />
 
-        <div className='font-black text-3xl mt-32'>Informações da Horta</div>
+        <div className='font-black text-3xl mt-32 md:text-center'>
+          Informações da Horta
+        </div>
 
-        <div className='flex flex-wrap gap-10 w-full mt-12 mb-16'>
-          <div className='flex-1'>
+        <div className='flex flex-wrap md:flex-col gap-10 w-full mt-12 mb-16'>
+          <div className='flex-1 md:text-center'>
             <div className='font-black text-2xl mb-6'>{profile?.name}</div>
-            <div className='flex'>
-              <span className='font-bold text-base ml-1'>Endereço:</span>
-              <span className='text-base ml-1'>{profile?.adress}</span>
+            <div className='flex md:justify-center'>
+              <span className='font-bold text-base ml-1'>
+                Endereço:{' '}
+                <span className='text-base ml-1 font-normal'>
+                  {profile?.adress}
+                </span>
+              </span>
             </div>
           </div>
           <div className='flex-1'>
-            <div>
-              <iframe
-                src={profile?.mapSrc}
-                width='600'
-                height='210'
-                loading='lazy'
-              ></iframe>
-            </div>
+            <iframe
+              src={profile?.mapSrc}
+              width='100%'
+              height='210'
+              loading='lazy'
+            ></iframe>
           </div>
         </div>
 
-        <div className='font-black text-3xl mb-12'>Galeria</div>
+        <div className='font-black text-3xl mb-12 md:text-center'>Galeria</div>
 
         <Gallery photos={profile?.images} />
 

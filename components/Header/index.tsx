@@ -16,7 +16,7 @@ function Header({ showLink, href, linkText, target }: HeaderProps) {
         <a
           target={target}
           href={href}
-          className='p-2 text-green underline cursor-pointer'
+          className='text-green underline cursor-pointer'
           rel='noreferrer'
         >
           {linkText}

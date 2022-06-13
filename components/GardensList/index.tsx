@@ -36,9 +36,9 @@ function GardensList() {
   return (
     <div className='w-full mb-32' id='second-section'>
       <div className='mb-16'>
-        <h2 className='font-black text-6xl'>Hortas</h2>
+        <h2 className='font-black text-6xl md:text-center'>Hortas</h2>
       </div>
-      <div className='flex flex-wrap gap-10'>
+      <div className='flex flex-wrap gap-10 sm:justify-center md:justify-center'>
         {gardens.map((garden) => (
           <div
             key={garden.name}
@@ -76,7 +76,7 @@ function GardensList() {
           </div>
         ))}
       </div>
-      <div className='flex justify-center mt-32'>
+      <div className='mt-32 text-center'>
         Ainda não tem sua horta cadastrada?
         <a
           target='_blank'

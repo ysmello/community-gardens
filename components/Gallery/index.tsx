@@ -6,7 +6,7 @@ interface GalleryProps {
 
 function Gallery({ photos }: GalleryProps) {
   return (
-    <div className='flex flex-wrap gap-10 w-full columns-3 rounded-lg overflow-hidden mb-32'>
+    <div className='flex flex-wrap gap-10 w-full columns-3 rounded-lg overflow-hidden mb-32 md:justify-center'>
       {photos?.map((photo, index) => (
         <div
           key={index}
